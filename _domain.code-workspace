@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "src/_domain"
+		},
+		{
+			"path": "src/_store"
+		}
+	],
+	"settings": {}
+}
