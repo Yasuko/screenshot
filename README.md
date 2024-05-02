@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# スクリーンショット撮影
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+便利なツールがたくさんあるので
+あくまで技術検証を目的にしたツール
+DisplayMediaから画面の内容をキャプチャし
+簡単な落書きを行う
 
-Currently, two official plugins are available:
+# 実行サンプル
+[サンプル](https://screenshot-e92.pages.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="etc/001.png" width="350">
 
-## Expanding the ESLint configuration
+キャプチャ開始後
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<img src="etc/002.png" width="350">
 
-- Configure the top-level `parserOptions` property like this:
+キャプチャ対象の選択選択画面から
+タブ・ウインドゥ・画面を選択
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<img src="etc/003.png" width="350">
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+「Capture」ボタンでキャプチャ
+
+<img src="etc/004.png" width="350">
+<img src="etc/005.png" width="350">
+
+適時画面に色を付け
+
+<img src="etc/006.png" width="350">
+
+「Download」を行う
+「Recapture」実行時はペイント内容が初期化される
