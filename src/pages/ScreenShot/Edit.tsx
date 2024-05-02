@@ -194,12 +194,4 @@ export const Edit = (): JSX.Element => {
     )
 }
 
-const getHeight = (w: number, h: number, css: string): string => {
-    console.log(w, h)
-    const _h = (h * 800) / w
-    console.log(_h)
-    //return css + ' h-[' + _h + 'px] '
-    return css + ' h-[430px] '
-}
-
 export default Edit

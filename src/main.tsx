@@ -8,7 +8,7 @@ import './styles/app.css'
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <BrowserRouter>
     <Routes>
-        <Route path="/" element={ <ScreenShot page="" /> }></Route>
+        <Route path="/" element={ <ScreenShot /> }></Route>
     </Routes>
   </BrowserRouter>
 )

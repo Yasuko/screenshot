@@ -52,6 +52,8 @@
     "src/_lib/indentification",
     "src/_lib/Math",
     "src/_lib/obj",
+    "src/_lib/audio",
+    "src/_lib/ocr",
     "functions/**/*",
   ]
 }
