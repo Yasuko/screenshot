@@ -26,7 +26,6 @@ const slice = createSlice({
                 show: action.show,
             })
         },
-
         setShow: (state: any, action: any) => {
             return Object.assign({}, state, {
                 show: action.show,

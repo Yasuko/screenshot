@@ -2,8 +2,9 @@ import {
     MediaService
 } from '../../../_lib/mediaDevice/media.service'
 import {
-    ImageStreamService
-} from '../../../_lib/image/image_stream.service'
+    ImageStreamService,
+    ImageInformationService
+} from '../../../_lib/image/image.service'
 
 
 export class ScreenShotHelper {
@@ -16,7 +17,7 @@ export class ScreenShotHelper {
         return ScreenShotHelper.instance
     }
 
-    public capture = '';
+    public capture = ''
 
     public getScreenShot(): string {
         return this.capture
@@ -35,14 +36,11 @@ export class ScreenShotHelper {
      * スタート処理
      */
     public async start(): Promise<void> {
-        const result = 
-            await MediaService.call().getLocalStream(
-                MediaService.call().callStreamModeService().getStreamMode(),
-                'getDisplayMedia'
-            )
-        
-        console.log(result)
-        
+        await MediaService.call().getLocalStream(
+            MediaService.call().callStreamModeService().getStreamMode(),
+            'getDisplayMedia'
+        )
+
         MediaService.call()
             .setVideoTarget('screenvideo')
             .playVideo()
@@ -53,6 +51,16 @@ export class ScreenShotHelper {
      */
     public stop(): void {
         MediaService.call().stopVideo()
+    }
+
+    /**
+     * 画像情報を取得
+     * @param image string
+     * @returns Promise<{width: number, height: number}>
+     */
+    public async getImageInformation(image: string): Promise<{width: number, height: number}> {
+        await ImageInformationService.call().set(image)
+        return ImageInformationService.call().getSize()
     }
 
 }

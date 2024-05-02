@@ -88,7 +88,6 @@ export const Home = (): JSX.Element => {
     )
 }
 
-
 const checkImage = (image: string, dispatch: Dispatch): JSX.Element => {
     return (image === '') 
         ? <div></div>
@@ -100,10 +99,9 @@ const checkImage = (image: string, dispatch: Dispatch): JSX.Element => {
             src={ image }
             onClick={() => {
                 dispatch({ 
-                    type: 'ScreenShot/setEdit',
+                    type: 'Editor/setEdit',
                     edit: true
                 })
-            
             }}
         />
 }
